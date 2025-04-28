@@ -1,0 +1,87 @@
+body {
+
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.grid-container {
+
+    display: grid;
+    grid-template-rows: 60px 80px 1fr 1fr 1fr 1fr 1fr 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+        "global-message global-message global-message"
+        "navbar navbar navbar"
+        "banner banner offer-1"
+        "banner banner offer-2"
+        "left-menu product product"
+        "recent product product"
+        "tags product product"
+        "footer footer footer"
+
+    ;
+
+    gap: 20px;
+}
+
+.global-message {
+
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    grid-area: global-message;
+}
+
+.navbar {
+    background: linear-gradient(90deg, rgba(39, 163, 85, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    grid-area: navbar;
+}
+
+.banner {
+    background: linear-gradient(179deg, rgba(58, 53, 150, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    grid-area: banner;
+}
+
+.offer-1 {
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    grid-area: offer-1;
+}
+
+.offer-2 {
+    background: linear-gradient(240deg, rgba(222, 17, 2, 1) 46%, rgba(148, 187, 233, 1) 100%);
+
+    grid-area: offer-2;
+}
+
+.left-menu {
+    background: linear-gradient(173deg, rgba(222, 2, 163, 1) 27%, rgba(148, 187, 233, 1) 72%);
+    grid-area: left-menu;
+}
+
+.recent {
+    background: linear-gradient(280deg, rgba(222, 2, 163, 1) 27%, rgba(117, 120, 133, 1) 79%);
+    grid-area: recent;
+}
+
+.tags {
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    grid-area: tags;
+}
+
+.product {
+    background: linear-gradient(178deg, rgba(58, 119, 180, 1) 0%, rgba(5, 2, 2, 1) 50%, rgba(252, 249, 69, 1) 100%);
+    grid-area: product;
+}
+
+.footer {
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    grid-area: footer;
+}
